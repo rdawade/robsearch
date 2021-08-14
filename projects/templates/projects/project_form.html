@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+{% block content %}
+
+
+
+<main class="formPage my-xl">
+    <div class="content-box"
+        style='width: 70%; padding 10px; border: 3px solid #ffffff; background-color: #ffffff; color: #031314; margin: auto; text-align: left;'>
+        <div class="formWrapper"
+            style='width: 90%; padding 10px;  #f1e8e8; background-color: #ffffff; color: #031314; margin: auto; text-align: :left;'>
+            <a class="backButton" href="{% url 'account' %}"><i class="im im-angle-left"></i></a>
+            <br>
+
+            <form class="form" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                <!-- Input:Text -->
+                <div class="form__field">
+                    <label for="formInput#text">{{field.label}} </label>
+                    {{field}}
+                </div>
+                {% endfor %}
+
+                <div class="form__field"></div>
+                {% for tag in project.tags.all %}
+                <div class="project-tag tag tag--pill tag--main" data-tag="{{tag.id}}" data-project="{{project.id}}">
+                    {{tag.name}} &#215;</div>
+                {% endfor %}
+
+                <div class="form__field">
+                    <label for="formInput#text">Tags</label>
+                    <textarea class="input" name="newtags" placeholder="Add tags here..."></textarea>
+
+                </div>
+
+
+
+                <!-- Input:Text -->
+
+                <input class="btn btn--sub btn--lg  my-md" type="submit" value="Submit" />
+            </form>
+        </div>
+    </div>
+</main>
+
+
+
+{% endblock %}
