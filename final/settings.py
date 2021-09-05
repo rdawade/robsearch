@@ -132,8 +132,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'robsearch',
         'USER': 'rob',
-        'PASSWORD': 'pussykhao',
-        'HOST': 'database-1.cfszwdvsawag.ap-south-1.rds.amazonaws.com',
+        'PASSWORD': 'PASS',
+        'HOST': 'HOST',
         'PORT': '5432',
     }
 }
@@ -186,7 +186,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'rdfromrd@gmail.com'
-EMAIL_HOST_PASSWORD = 'tbqjivesqgsbmgoc'
+EMAIL_HOST_PASSWORD = 'PASS'
 
 
 # Static files (CSS, JavaScript, Images)
@@ -206,8 +206,8 @@ AWS_QUERYSTRING_AUTH = False
 
 AWS_S3_FILE_OVERWRITE = False
 
-AWS_ACCESS_KEY_ID = 'AKIASUFIGKEBEGDPOTU5'
-AWS_SECRET_ACCESS_KEY =  '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'
+AWS_ACCESS_KEY_ID = 'ID'
+AWS_SECRET_ACCESS_KEY =  'KEY'
 AWS_STORAGE_BUCKET_NAME =  'robj-bucket'
 
 
